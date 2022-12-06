@@ -10,18 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_04_195746) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_112343) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "parcels", force: :cascade do |t|
     t.integer "weight"
     t.datetime "pickup_time"
-    t.integer "price"
     t.datetime "recieved_at"
     t.string "description"
     t.string "pickup_address"
-    t.string "status"
     t.string "present_location"
     t.string "received_by"
     t.datetime "created_at", null: false
