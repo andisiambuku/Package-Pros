@@ -1,4 +1,6 @@
 class ParcelsController < ApplicationController
+    # protect_from_forgery with: :null_session,
+    # if: Proc.new { |c| c.request.format =~ %r{application/json} 
     # method to get all parcels
     def  index 
         parcels = Parcel.all 
@@ -36,6 +38,11 @@ class ParcelsController < ApplicationController
     end
     private
     def parcel_params
-        params.permit(:description,:weight,:address,:pickup_address,:price)
+        params.permit(:pickup_address,:weight,:address,:description)
     end
+    # def create_order
+    #         Parcel.find(params[:id])
+    # end
 end
+
+
