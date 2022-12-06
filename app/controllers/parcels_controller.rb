@@ -8,7 +8,7 @@ class ParcelsController < ApplicationController
     #method to show a specific parcel
     def show 
         parcel = Parcel.find(params[:id])
-        render json: pizza,status: :ok
+        render json: parcel,status: :ok
     end
 
     #method to create a parcel order
@@ -24,7 +24,7 @@ class ParcelsController < ApplicationController
         head :no_content
     end
 
-    #method to change destination of order
+    #method to change pickup_address of order
     def update
         parcel = Parcel.find(params[:id])
         if parcel
@@ -36,6 +36,6 @@ class ParcelsController < ApplicationController
     end
     private
     def parcel_params
-        params.permit(:description,:weight,:address,:destination,:price)
+        params.permit(:description,:weight,:address,:pickup_address,:price)
     end
 end
