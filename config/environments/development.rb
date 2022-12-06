@@ -62,4 +62,14 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  Rails.application.configure do
+    # Whitelist one hostname
+    config.hosts << "philipp"
+    # Whitelist a test domain. Rails adds \A and \z around
+    # your regular expressions.
+    config.hosts << /application\.local/
+  end
+  Rails.application.configure do
+    config.hosts.clear
+  end
 end
