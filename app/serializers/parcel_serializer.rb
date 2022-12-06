@@ -1,3 +1,3 @@
 class ParcelSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :description, :weight,:pickup_address,:present_location,:received_by
 end
