@@ -8,12 +8,7 @@ Rails.application.routes.draw do
   put 'parcels/:id', to: 'parcels#update'
 
   #Setting up Auth Routes
-  resource :users, only: [:create]
-  post "/login", to: "users#login"
-  get "/auto_login", to: "users#auto_login"
+  resources :users, only: [:create]
+  post '/login', to: 'auth#create'
+  get '/profile/', to: 'users#profile'
 end
-
-
-
-
-

@@ -1,37 +1,23 @@
 class UsersController < ApplicationController
-    before_action :authorized, only: [:auto_login]
-
-  # SIGNUP
+  before_action :authorized, only: [:create]
   def create
-    @user = User.create(user_params)
-    if @user.valid?
-      token = encode_token({user_id: @user.id})
-      render json: {user: @user, token: token}
+    user = User.create(user_params)
+    if user.valid?
+      token = encode_token(user_id: user.id)
+      render json: { user: UserSerializer.new(user), jwt: token }, status: :created
     else
-      render json: {error: "Invalid fullname or password"}
+      render json: { error: 'failed to create user' }, status: :unprocessable_entity
     end
   end
 
-  # LOGGING IN
-  def login
-    @user = User.find_by(fullname: params[:fullname])
-
-    if @user && @user.authenticate(params[:password])
-      token = encode_token({user_id: @user.id})
-      render json: {user: @user, token: token}
-    else
-      render json: {error: "Invalid username or password"}
-    end
-  end
-
-
-  def auto_login
-    render json: @user
+  def profile
+    render json: user
   end
 
   private
 
   def user_params
-    params.permit(:fullname, :password, :phone_number, :email)
+    params.require(:user).permit(:fullname, :phone_number, :password, :email)
   end
+
 end

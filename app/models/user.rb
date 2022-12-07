@@ -3,5 +3,6 @@ class User < ApplicationRecord
     # validate the full_name to make sure that all users have unique usernames on the model.
     has_secure_password
     validates :full_name, uniqueness: { case_sensitive: false }
+    validates :password, presence: true
     has_many :parcels
 end
