@@ -17,3 +17,4 @@ Parcel.create([{weight: 3, pickup_time: 1300, recieved_at: 1200, description: "L
     {weight: 12, pickup_time: 1300,  recieved_at: 1200, description: "Lorem ipsum something something", pickup_address: "Nairobi",  present_location: "Busia", received_by:"Jeremy"},
     {weight: 30, pickup_time: 1300, recieved_at: 1200, description: "Lorem ipsum something something", pickup_address: "Nairobi",  present_location: "Embu", received_by:"Joyce"}])
 
+   #  user = User.create(username: "alexmerced", phone_number:"0334998777", email:"alaa@gamil.com")
