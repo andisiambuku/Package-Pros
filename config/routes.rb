@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   delete 'parcels/:id', to: 'parcels#destroy'
   put 'parcels/:id', to: 'parcels#update'
 
-  #
+  #Setting up Auth Routes
   resource :users, only: [:create]
   post "/login", to: "users#login"
   get "/auto_login", to: "users#auto_login"
