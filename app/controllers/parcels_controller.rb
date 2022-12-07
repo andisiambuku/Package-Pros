@@ -38,7 +38,7 @@ class ParcelsController < ApplicationController
     end
     private
     def parcel_params
-        params.permit(:pickup_address,:weight,:address,:description)
+        params.permit(:pickup_address,:weight,:address,:description,:received_by,:present_location)
     end
     # def create_order
     #         Parcel.find(params[:id])
