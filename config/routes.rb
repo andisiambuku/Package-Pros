@@ -7,17 +7,8 @@ Rails.application.routes.draw do
   delete 'parcels/:id', to: 'parcels#destroy'
   put 'parcels/:id', to: 'parcels#update'
 
-  # route our requests, for the signup which is a create action.
-  namespace :api do
-    namespace :v1 do
-      resources :users, only: [:create]
-    end
-  end
-
- 
+  #Setting up Auth Routes
+  resources :users, only: [:create]
+  post '/login', to: 'auth#create'
+  get '/profile/', to: 'users#profile'
 end
-
-  
-  
-
-
