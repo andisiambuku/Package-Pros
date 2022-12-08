@@ -71,7 +71,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   # to correct an error
-  config.assets.initialize_on_precompile = false
+  # config.assets.initialize_on_precompile = false
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"
