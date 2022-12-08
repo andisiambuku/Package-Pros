@@ -1,18 +1,20 @@
 databases:
-  - name: postgres
-    ipAllowList: []
+  - name: package_pros_production
+    databaseName: package_pros_production
+    user: package_pros_production
+    # ipAllowList: []
     
 
 services:
   - type: web
-    name: rails
+    name: package_pros_production
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: bundle exec rails s
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: postgres
+          name: package_pros_production
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
