@@ -2,7 +2,8 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+   #host configuration
+   config.hosts << "https://package-pros-production.up.railway.app/"
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -70,8 +71,9 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  # to correct an error
-  # config.assets.initialize_on_precompile = false
+  
+ 
+  
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"
