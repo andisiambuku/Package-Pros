@@ -93,3 +93,5 @@ production:
   database: package_pros_production
   username: package_pros
   password: <%= ENV["PACKAGE_PROS_DATABASE_PASSWORD"] %>
+  rake assets: precompile RAILS_ENV=development
+
