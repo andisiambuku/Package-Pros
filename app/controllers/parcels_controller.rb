@@ -1,6 +1,8 @@
 class ParcelsController < ApplicationController
     # protect_from_forgery with: :null_session,
     # if: Proc.new { |c| c.request.format =~ %r{application/json} 
+
+    
     # method to get all parcels
     def  index 
         parcels = Parcel.all 
