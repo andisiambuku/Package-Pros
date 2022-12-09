@@ -7,11 +7,11 @@ Healthcheck.configure do |config|
   config.route = '/healthcheck'
   config.method = :get
 
-  # -- Custom Response --
-  # config.custom = lambda { |controller, checker|
-  #   return controller.render(plain: 'Everything is awesome!') unless checker.errored?
-  #   controller.verbose? ? controller.verbose_error(checker) : controller.head_error
-  # }
+  -- Custom Response --
+  config.custom = lambda { |controller, checker|
+    return controller.render(plain: 'Everything is awesome!') unless checker.errored?
+    controller.verbose? ? controller.verbose_error(checker) : controller.head_error
+  }
 
   # -- Checks --
   # config.add_check :database,     -> { ActiveRecord::Base.connection.execute('select 1') }
