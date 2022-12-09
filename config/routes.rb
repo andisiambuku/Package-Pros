@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 # Setting up health check route
-get '/', to: 'healthchecks#index'
+# get '/', to: 'healthchecks#index'
 #setting parcel routes
   resources :parcels
 
