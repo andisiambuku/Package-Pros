@@ -35,7 +35,7 @@ Clone the project
 - [@andisiambuku](https://github.com/andisiambuku)
 - [@philipNgungi037](https://github.com/philipNgungi037)
 - [@briankorir44](https://github.com/briankorir44)
-- [@jushpher](https://github.com/)
+- [@juspher-mokua](https://github.com/juspher-mokua)
 
 ## Contributing
 
