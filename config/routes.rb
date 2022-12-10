@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
  
 # Setting up health check route
-   get '/health', to: 'check#index'
-#  get '/healthcheck', to: proc { [200, {}, ['success']] }
+  mount HealthCheck, at: "/health"
+
 
   #setting parcel routes
   resources :parcels
