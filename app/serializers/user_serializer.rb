@@ -1,4 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
 #   #serialize username,phone & email
-  attributes :id, :username, :telephone, :password, :email
+  attributes :id, :fullname, :telephone, :password, :email
 end

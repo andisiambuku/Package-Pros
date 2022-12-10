@@ -145,9 +145,6 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-healthcheck (1.4.0)
-      actionpack
-      railties
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
     railties (7.0.4)
@@ -176,7 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.13)
-  bcrypt (~> 3.1.7)
+  bcrypt (~> 3.1.18)
   bootsnap
   debug
   faker (~> 3.0)
@@ -185,7 +182,6 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.4)
-  rails-healthcheck
   tunnels
   tzinfo-data
 
