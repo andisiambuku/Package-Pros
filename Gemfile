@@ -55,4 +55,4 @@ gem "faker", "~> 3.0"
 
 gem "tunnels"
 
-gem 'rails-healthcheck'
+#gem 'rails-healthcheck'
