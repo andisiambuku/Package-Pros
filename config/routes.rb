@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
  
-# Setting up health check route
-  mount HealthCheck, at: "/health"
+
 
 
   #setting parcel routes
