@@ -1,26 +1,26 @@
 class ParcelsController < ApplicationController
     # protect_from_forgery with: :null_session,
-    # if: Proc.new { |c| c.request.format =~ %r{application/json} 
+    # if: Proc.new { |c| c.request.format =~ %r{application/json}
     # method to get all parcels
-    def  index 
-        parcels = Parcel.all 
+    def  index
+        parcels = Parcel.all
         render json: parcels, status: :ok
     end
 
     #method to show a specific parcel
-    def show 
-        parcel = Parcel.find(params[:id])
+    def show
+        parcel = Parcel.find_by(params[:id])
         render json: parcel,status: :ok
     end
 
     #method to create a parcel order
-    def create 
+    def create
         parcel = Parcel.create!(parcel_params)
         render json: parcel, status: :created
     end
 
     #method to cancel a parcel order
-    def destroy 
+    def destroy
         parcel = Parcel.find(params[:id])
         parcel.destroy
         head :no_content
