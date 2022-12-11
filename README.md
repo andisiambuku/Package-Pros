@@ -1,24 +1,58 @@
-# README
+# Package Pros
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Package Pros is an application that allows users to  send and receive packages from anywhere in the country. They can send to any destination and be guaranteed of delivery.
 
-Things you may want to cover:
+## Run Locally
 
-* Ruby version
+Clone the project
 
-* System dependencies
+```bash
+  git clone https://github.com/andisiambuku/Package-Pros.git
+```  
 
-* Configuration
+```bash
+  bundle install
+```
 
-* Database creation
+```bash
+  rails db:create
+```
 
-* Database initialization
+```bash
+  rails db:migrate db:seed
+```
 
-* How to run the test suite
+```bash
+  rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## API Reference
 
-* Deployment instructions
+ Coming Soon
 
-* ...
+## Authors
+
+- [@andisiambuku](https://github.com/andisiambuku)
+- [@philipNgungi037](https://github.com/philipNgungi037)
+- [@briankorir44](https://github.com/briankorir44)
+- [@juspher-mokua](https://github.com/juspher-mokua)
+
+## Contributing
+
+Contributions are always welcome!
+
+Fork > Contribute your idea > Create a Pull Request > Improve the project
+
+## Tech Stack
+
+**Client:** React
+
+**Server:** Ruby on Rails, PostgreSQL
+
+## Related
+
+Here are some related projects
+
+[Package-Pros Front-end](https://github.com/briankorir44/Package-Pros-Project)
+
+## Deployment

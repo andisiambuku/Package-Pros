@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   end
 
   def profile
-    render json: user
+    
+    render json: @user
   end
 
   private
