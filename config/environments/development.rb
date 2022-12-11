@@ -8,7 +8,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
   #host configuration
-  config.hosts << "https://package-pros-production.up.railway.app/"
+  # config.hosts << "https://package-pros-production.up.railway.app/"
 
 
   # Do not eager load code on boot.
