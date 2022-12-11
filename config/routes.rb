@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
  
 
-
+  #health check route
+  get '/health_check', to: proc { [200, {}, ['success']] }
 
   #setting parcel routes
   resources :parcels
