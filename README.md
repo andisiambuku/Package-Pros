@@ -27,8 +27,9 @@ Clone the project
 ```
 
 ## API Reference
-
- Coming Soon
+ /parcels
+ /users
+ /login 
 
 ## Authors
 
@@ -56,3 +57,5 @@ Here are some related projects
 [Package-Pros Front-end](https://github.com/briankorir44/Package-Pros-Project)
 
 ## Deployment
+The link to the deployed backend
+https://package-pros.onrender.com/
